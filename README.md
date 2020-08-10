@@ -5,7 +5,6 @@
 |name|string|null: false|
 |email|string|null: false, unique: true|
 |password|string|null: false|
-|group_id|integer|foreign_key: true|
 ### Association
 - has_many :groups_users
 - has_many  :groups,  through:  :groups_users

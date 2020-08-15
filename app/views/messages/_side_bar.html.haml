@@ -1,0 +1,23 @@
+.side-bar
+  .side-header
+    .header-box
+      .user-name
+        masa
+      .icon
+        = link_to "#", class: "icon__btn" do
+          = icon('fas', 'edit')
+        = link_to "#", class: "icon__btn icon__btn__edit" do
+          = icon('fas', 'cog')
+  .groups
+    .group
+      = link_to "#", class: "messages" do
+        .group-name
+          サンプル１
+        .message
+          Поехали!
+    .group
+      = link_to "#", class: "messages" do
+        .group-name
+          サンプル２
+        .message
+          まだメッセージはありません

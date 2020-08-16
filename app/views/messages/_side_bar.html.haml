@@ -2,11 +2,11 @@
   .side-header
     .header-box
       .user-name
-        masa
+        = current_user.name
       .icon
         = link_to "#", class: "icon__btn" do
           = icon('fas', 'edit')
-        = link_to "#", class: "icon__btn icon__btn__edit" do
+        = link_to "/users/:id/edit", class: "icon__btn icon__btn__edit" do
           = icon('fas', 'cog')
   .groups
     .group

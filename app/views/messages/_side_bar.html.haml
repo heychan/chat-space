@@ -4,20 +4,15 @@
       .user-name
         = current_user.name
       .icon
-        = link_to "#", class: "icon__btn" do
+        = link_to new_group_path, class: "icon__btn" do
           = icon('fas', 'edit')
         = link_to "/users/:id/edit", class: "icon__btn icon__btn__edit" do
           = icon('fas', 'cog')
   .groups
-    .group
-      = link_to "#", class: "messages" do
-        .group-name
-          サンプル１
-        .message
-          Поехали!
-    .group
-      = link_to "#", class: "messages" do
-        .group-name
-          サンプル２
-        .message
-          まだメッセージはありません
+    - current_user.groups.each do |group|
+      .group
+        = link_to "#", class: "messages" do
+          .group-name
+            = group.name
+          .message
+            Поехали!

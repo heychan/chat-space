@@ -17,7 +17,7 @@
 
   .form
     = form_with model: [@group, @message], html: {class: "form-box"}, local: true do |f|
-      .message-box
+      .message-box-form
         = f.text_field :content, class: 'message', placeholder: 'type a message'
         = f.label :image, class: 'image-btn' do
           = icon('fas', 'image', class: 'Form__icon')
